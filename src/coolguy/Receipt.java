@@ -3,20 +3,27 @@ package coolguy;
     public class Receipt {
         public static void main(String[] args) {
             // Calculate total owed, assuming 8% tax / 15% tip
-            System.out.println("Subtotal:");
-            System.out.println(38 + 40 + 30);
+            // The value can be an expression; the variable stores its result; thus double variable
+            double Subtotal = 38 + 40 + 30;
+            double Tax = Subtotal * .08;
+            double Tip = Subtotal * .15;
+            double Total = Subtotal + Tax + Tip;
 
-            System.out.println("Tax:");
-            System.out.println((38 + 40 + 30) * .08);
+            System.out.println("Subtotal:" + Subtotal);
 
-            System.out.println("Tip:");
-            System.out.println((38 + 40 + 30) * .15);
+            System.out.println("Tax:" + Tax);
 
-            System.out.println("Total:");
-            System.out.println(38 + 40 + 30 +
-                    (38 + 40 + 30) * .15 +
-                    (38 + 40 + 30) * .08);
+            System.out.println("Tip:" + Tip);
+
+            System.out.println("Total:" + Total);
 
         }
-
+//        Subtotal:
+//                108
+//        Tax:
+//                8.64
+//        Tip:
+//                16.2
+//        Total:
+//                132.84
 }

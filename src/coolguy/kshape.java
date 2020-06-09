@@ -64,4 +64,4 @@ public class kshape {
         System.out.println();
     }
 }
-// what i have so far -- ask more in class tmw, confused on how to adjust size for this
+// what i have so far -- ask more in class tmw, confused on how to adjust size for this.

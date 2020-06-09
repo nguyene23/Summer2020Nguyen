@@ -1,7 +1,7 @@
 package coolguy;
 
 public class mirrorV2 {
-    public static final int SIZE=3; //declaring the global constant
+    public static final int SIZE=10; //declaring the global constant
     public static void main(String[] args) {
             Frame();
             topmirror();
