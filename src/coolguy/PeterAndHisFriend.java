@@ -18,7 +18,9 @@ public class PeterAndHisFriend {
         for (byte count = 0; count <= 1; count++){
             char letter = firstWord.charAt(0);
             System.out.print(letter);
+            
         }
         int indexOf = firstWord.indexOf(" ");
+
     }
 }
