@@ -25,7 +25,7 @@ public class ChallengeOperators {
         double mealCost;
         int tipPercent;
         int taxPercent;
-        int totalCost;
+        int totalCost = '0';
 
         //attach scanner to ask
         System.out.println("What was your meal's cost?");
@@ -35,9 +35,16 @@ public class ChallengeOperators {
         System.out.println("What was your meal's tax?");
         taxPercent = console.nextInt();
 
-        solve(mealCost, taxPercent, tipPercent);
+        //method
+        solve(mealCost, taxPercent, tipPercent,totalCost);
     }
-    public static void solve(double mealCost, int tipPercent, int taxPercent){
-
+    public static void solve(double mealCost, int tipPercent, int taxPercent, int totalCost){
+        //math calculations
+        double tip = mealCost * (tipPercent/100.0);
+        double tax = mealCost * (taxPercent/100.0);
+        totalCost = (int) (mealCost + tip + tax);
+        //rounding and printing function
+        Math.round(totalCost);
+        System.out.println("Your total cost is $"+ totalCost);
     }
 }
