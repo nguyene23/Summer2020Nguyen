@@ -35,9 +35,9 @@ public class ChallengeDataTypes {
         String str1;
 
         //declare other variables -- these are 'i', 'd', and 's'
-        int integy2 = 4;
-        double doubly2 = 4.0;
-        String str2 = "Greenhill";
+        int i = 4;
+        double d = 4.0;
+        String s = "Greenhill";
 
         //ask for user input
         //print line prompts on new line
@@ -47,18 +47,19 @@ public class ChallengeDataTypes {
         integy1 = console.nextInt();
         System.out.println("Enter in a double: ");
         doubly1 = console.nextDouble();
+        console = new Scanner(System.in);
         System.out.println("Enter in a string: ");
         str1 = console.nextLine();
 
         //(functions don't work) here are the math calculations
-        int calc1=integy1+integy2;
-        double calc2=doubly1+doubly2;
-        String calc3=(str1 + " " + str2);
+        int calc1=integy1+i;
+        double calc2=doubly1+d;
+        String calc3=(s + " " + str1);
 
         //print them out
-        System.out.printf("Integer answer: \n%10d", calc1);
+        System.out.printf("Integer answer: \n%d", calc1);
         System.out.println();
-        System.out.printf("Double answer: \n%10.1f", calc2);
+        System.out.printf("Double answer: \n%.1f", calc2);
         System.out.println();
         System.out.println("String answer: \n" + calc3);
     }
