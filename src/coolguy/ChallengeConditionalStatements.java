@@ -26,7 +26,7 @@ public class ChallengeConditionalStatements {
         asking(console, rand);
     }
     public static void asking(Scanner console, Random rand){
-        int n = rand.nextInt(137);
+        int n = rand.nextInt(137)+1;
         System.out.println("Do you want to play? (Yes or No)");
         String input = console.nextLine();
         if (input.toUpperCase().contains("Y")) {
