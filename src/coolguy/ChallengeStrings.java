@@ -20,34 +20,53 @@ Close method bracket*/
 
 import java.util.Scanner;
 public class ChallengeStrings {
-    //making variables accessible thru entire thing
-    public static int T;
-    public static String s;
-
     public static void main(String[] args) {
+        //making variables accessible thru entire thing
+        int T;
+        String s = "";
+
         //declaring and initializing scanner + sys prints
         Scanner input = new Scanner(System.in);
-        System.out.println("Please enter the number of test cases: ");
-        T = input.nextInt();
-        input = new Scanner(System.in);
-        System.out.println("Please print your phrase: ");
-        s = input.nextLine();
+
+        // this will loop the program until the user puts in the right number.
+        do {
+            System.out.println("How many words are there in your phrase (between 1-10)?");
+            T = input.nextInt();
+        }
+        while (T < 1 || T > 10);
+
+    // this is the loop asking for the user's phrase.
+        for (int i = 0; i < T; i++) {
+            do {
+                input = new Scanner(System.in);
+                System.out.println("Please print your phrase (one word at a time):");
+                s = input.nextLine();
+            }
+            while (s.length() < 2 || s.length() > 10000);
+
+            //printing answer
+            String scramble = scramble(s);
+            System.out.println(scramble);
+        }
+    }
+
+    public static String scramble (String s){
+        //making for loop to discover index of characters
         //declare and initialize strings
         String even = "";
         String odds = "";
-
-        //making for loop to discover index of characters
         for (int index = 0; index < s.length(); index+=2) {
-            even += s.charAt(index);
+            char evenLetter = s.charAt(index);
+            even = even+evenLetter;
         }
         for (int index = 1; index < s.length(); index+=2) {
-            odds += odds + s.charAt(index);
+            char oddLetter = s.charAt(index);
+            odds = odds+oddLetter;
         }
         //return method
-        String answer = even+" "+odds;
-        System.out.println(answer);
+        String answer;
+        answer = even+" "+odds;
+        return answer;
     }
 }
-/* unfortunately i was unable to go to any office hours provided b/c of road tripping and lack of
-accessibility to wifi... i'll need to ask why my program keeps on doing... That.
- */
+/* RESUBMITTED! TY to Lily to helping me understand why I needed the for and do while loops :) */
