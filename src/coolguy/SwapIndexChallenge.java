@@ -12,6 +12,7 @@ public class SwapIndexChallenge {
         Random randy = new Random();
         int n = randy.nextInt();
 
+        //define array
         int[] myArray = new int [numbers];
 
         //for loop to insert randy values into the array
@@ -29,6 +30,7 @@ public class SwapIndexChallenge {
         }
         while (x==y);
 
+        //method and printing
         myArray = swap(myArray, x, y);
         System.out.println ("Swapped: "+Arrays.toString(myArray));
     }
@@ -42,5 +44,4 @@ public class SwapIndexChallenge {
 }
 /*THE GAMEPLAN: define the last two integers as 2 separate variables, and then swap them in
 * the swap method.
-*
 * so update maybe we r lost*/
