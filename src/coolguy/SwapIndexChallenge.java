@@ -19,6 +19,7 @@ public class SwapIndexChallenge {
             myArray[i] = randy.nextInt((100)+1);//this should put the numbers into our array but doesn't
         }
         System.out.println(Arrays.toString(myArray));
+
         // create your 2 random indexes and replace 1 & 2.
         int x;
         int y;
@@ -28,11 +29,11 @@ public class SwapIndexChallenge {
         }
         while (x==y);
 
-        myArray = swap(myArray, x, y, numbers);
+        myArray = swap(myArray, x, y);
         System.out.println ("Swapped: "+Arrays.toString(myArray));
     }
 
-    public static int[] swap (int [] a1, int a, int b, int numbers){
+    public static int[] swap (int [] a1, int a, int b){
         int temp = a1[a];
         a1[a] = a1[b];
         a1[b] = temp;
