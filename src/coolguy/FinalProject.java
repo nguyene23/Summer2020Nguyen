@@ -119,5 +119,5 @@ remember to close scanners :-)
 
 maybe make arrays for the double method -- doubles are put in there, disregard everything else;
 then perform a search function to see if user input = value in array. if yes, then print correct, if
-not, then don't, rip/?
+not, then don't, rip?
  */
