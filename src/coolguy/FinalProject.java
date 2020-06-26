@@ -36,9 +36,9 @@ public class FinalProject {
     public static int win = 0;
 
     public static void main(String[] args) throws FileNotFoundException {
+        welcome();
         //declaring file and scanner
         Scanner verv = new Scanner(System.in);
-
         //declaring string input for user input
         String input = "";
         userInput(verv, input);
@@ -68,6 +68,7 @@ public class FinalProject {
             }
             console.close();
             System.out.println("Do you want to play again?");
+            input = verv.next();
         }
         while (input.toUpperCase().contains("Y"));
         System.out.println("Goodbye! You played " + total + " times and won " + win + " times.");
@@ -115,9 +116,31 @@ public class FinalProject {
             }
         return win;
     }
-
     public static int integers(Scanner console, Scanner verv, int win) {
-        //void
+        String wordsInput = "";
+        total++;
+        System.out.println("What is an integer between 0 - 350?");
+        //declaring and initializing both double values
+        int integy1 = verv.nextInt();
+        String trash;
+        //while loop
+        while (console.hasNextLine()) {
+            //declaring if doubly1=doubly2, then flag is true and will run answer is correct
+            if (console.hasNextInt()) { // if there is a match
+                if (console.nextInt() == integy1) {
+                    win++;
+                    System.out.println(integy1 + " is in the file, so your answer is correct!");
+                    break;
+                }
+            } else { //if number wasn't found
+                trash = console.next();
+            }
+        }
         return win;
+    }
+    public static void welcome(){
+        System.out.println("<>-------------<>");
+        System.out.println("|  ❇ welcome ❇ |");
+        System.out.println("<>-------------<>");
     }
 }
