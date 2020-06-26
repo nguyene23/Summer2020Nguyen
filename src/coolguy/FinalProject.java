@@ -34,21 +34,22 @@ import java.io.*;
 public class FinalProject {
     public static int total = 0;
     public static int win = 0;
+
     public static void main(String[] args) throws FileNotFoundException {
         //declaring file and scanner
-        File file = new File("C:\\Users\\color\\IdeaProjects\\Summer2020Nguyen\\src\\coolguy\\finalprocessing.txt");
-        Scanner console = new Scanner(file);
         Scanner verv = new Scanner(System.in);
 
         //declaring string input for user input
         String input = "";
-        userInput(file, console, verv, input);
+        userInput(verv, input);
     }
 
     //methods
-    public static void userInput(File file, Scanner console, Scanner verv, String input){
+    public static void userInput(Scanner verv, String input) throws FileNotFoundException {
         //do while loop for user input
         do {
+            File file = new File("C:\\Users\\color\\IdeaProjects\\Summer2020Nguyen\\src\\coolguy\\finalprocessing.txt");
+            Scanner console = new Scanner(file);
             System.out.println("Do you want to play a guessing game?");
             input = verv.next();
             //asking for user input on wanting to play the game
@@ -56,27 +57,44 @@ public class FinalProject {
                 System.out.println("Do you want to guess words, doubles, or integers?");
                 input = verv.next();
                 if (input.toLowerCase().contains("wo")) {
-                    win = words(console, verv, input); //goes to method
+                    win = words(console, verv, win); //goes to method
                 }
-                if (input.toLowerCase().contains("d")) {
-                    doubles(file, console, verv, input); //goes to method
+                else if (input.toLowerCase().contains("dou")) {
+                    win=doubles(console, verv, win); //goes to method
                 }
-                if (input.toLowerCase().contains("i")) {
-                    integers(console, verv, input); //goes to method
+                else if (input.toLowerCase().contains("i")) {
+                    win = integers(console, verv, win); //goes to method
                 }
-            } else System.out.println("Goodbye! You played "+total+" times and won "+win+" times.");
+            }
+            console.close();
+            System.out.println("Do you want to play again?");
         }
-        while (input.equals(""));
+        while (input.toUpperCase().contains("Y"));
+        System.out.println("Goodbye! You played " + total + " times and won " + win + " times.");
     }
-    public static int words(Scanner console, Scanner verv, String input) {
-        //void
 
+    public static int words(Scanner console, Scanner verv, int win) throws FileNotFoundException {
+        total++;
+        String line;
+        String trash;
+        //print statements
+        System.out.println("Guess the name of a country!");
+        String wordInput = verv.next();
+        while (console.hasNextLine()) {
+            if (console.hasNext()){
+                if (console.nextLine().contains(wordInput)) {
+                    win++;
+                    System.out.println(wordInput + " is in the file, so your answer is correct!");
+                    break;
+                }
+            }
+        }
         return win;
     }
-    public static void doubles(File file, Scanner console, Scanner verv, String input) {
-        String wordsInput="";
-        do {
-            total++;
+
+    public static int doubles(Scanner console, Scanner verv, int win) {
+        String wordsInput = "";
+        total++;
             System.out.println("What is a double between 1 and 23?");
             //declaring and initializing both double values
             double doubly1 = verv.nextDouble();
@@ -95,23 +113,11 @@ public class FinalProject {
                     trash = console.next();
                 }
             }
-            //looping game again
-            System.out.println("Would you like to guess a double again?");
-            wordsInput = verv.next();
+        return win;
+    }
 
-        } while (wordsInput.toUpperCase().contains("Y"));
-            doubles(file, console, verv, input);
-        }
-
-    public static void integers(Scanner console, Scanner verv, String input) {
+    public static int integers(Scanner console, Scanner verv, int win) {
         //void
+        return win;
     }
 }
-/*
-declare file inside method, put print statements in main instead
-remember to close scanners :-)
-
-maybe make arrays for the double method -- doubles are put in there, disregard everything else;
-then perform a search function to see if user input = value in array. if yes, then print correct, if
-not, then don't, rip
- */
