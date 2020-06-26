@@ -7,8 +7,8 @@
 130    132    134    136    138    140    142    144    11.8    11.6    12.3    12.5    13.1    Canada     Cayman Islands    Central African Republic    Central African Federation    Chad    Chile    China
 146    148    150    152    154    156    158    160    162    164    166    11.6    13.8    14.7    15.7    Colombia    Comoros    Congo Free State    Costa Rica    Cote d’Ivoire    
 168    170    172    174    176    178    180    182    184    186   188    190    14.2    16.7    16.8   Croatia    Cuba    Cyprus    Czechia    Czechoslovakia
-192    194    196    198    200    202    204    206    208    210    16.5    17.4    17.3    15.9    Democratic Republic of the Congo    Denmark    Djibouti    Dominica   Dominican Republic    Duchy of Parma
-212    214    216    218    220    222    224    226     228    230    17.3     17.1    16.8    18.1    Ecuador    Egypt    El Salvador    Equatorial Guinea    Eritrea    Estonia    
+192    194    196    198    200    202    204    206    208    210    16.5    17.0    17.3    15.9    Democratic Republic of the Congo    Denmark    Djibouti    Dominica   Dominican Republic    Duchy of Parma
+212    214    216    218    220    222    224    226     228    230    17.9     17.1    16.8    18.1    Ecuador    Egypt    El Salvador    Equatorial Guinea    Eritrea    Estonia
 232    234    236    238    240    242    244    246    248    250    18.9    18.6    17.5   Ethiopia    Fiji    Finland    France    Gabon    Gambia    Georgia    
 252    254    256    258    260    262    264    3.7    18.5    16.2    17.9    18.3    Germany   Ghana    Greece     Grenada     Guatemala    Guinea    Guinea-Bissau    Guyana
 266    268    270    272    274    276    278    280    282    284    18.4    12.2    14.4    Haiti    Honduras    Hungary    Iceland    India    Indonesia    Iran
