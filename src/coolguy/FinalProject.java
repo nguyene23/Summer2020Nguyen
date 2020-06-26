@@ -28,7 +28,7 @@ Else Print out they correct the wrong answer
 Ask if they want to play again -- if yes, then go back to top of method
 Return method to main arg (the loop)
 Close words method
-same for other two, but the pseudocode is ridiculously long*/
+full pseudocode: https://docs.google.com/document/d/1auOUNRgmefDYhBfgI6K7Bho6vN4WMGpzyEHyapEsOmc/edit*/
 import java.util.*;
 import java.io.*;
 public class FinalProject {
